@@ -1,6 +1,6 @@
 {
   "name": "psj-ui-kit",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": false,
   "description": "Use for all Jason side project",
   "author": "Jason",
@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/st890670/react-ui-kit.git"
+    "url": "git+https://github.com/st890670/psj-ui-kit.git"
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
