@@ -1,11 +1,12 @@
 {
   "name": "psj-ui-kit",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": false,
   "description": "Use for all Jason side project",
   "author": "Jason",
   "main": "dist/index.js",
   "module": "dist/index.js",
+  "types": "src/components/index.d.ts",
   "files": [
     "dist",
     "README.md"
