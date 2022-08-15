@@ -1,12 +1,14 @@
+import styles from "./style.module.scss";
+
 interface ButtonProps {
-  label: string;
+  children: React.ReactNode;
   onClick?: () => void;
 }
 
-const Button = ({ label, ...props }: ButtonProps) => {
+const Button = ({ children, ...props }: ButtonProps) => {
   return (
-    <button className="text-red" type="button" {...props}>
-      {label}
+    <button className={styles.button} type="button" {...props}>
+      {children}
     </button>
   );
 };
