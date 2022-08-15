@@ -1,12 +1,12 @@
 {
   "name": "psj-ui-kit",
-  "version": "0.1.5",
+  "version": "0.1.10",
   "private": false,
   "description": "Use for all Jason side project",
   "author": "Jason",
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "types": "src/components/index.d.ts",
+  "types": "dist/index.d.ts",
   "files": [
     "dist",
     "README.md"
@@ -34,7 +34,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "build-storybook": "build-storybook -s public",
-    "build:npm": "rm -rf dist && babel src/components --out-dir dist --copy-files --extensions \".ts,.tsx\" --source-maps",
+    "build:npm": "rm -rf dist && babel src/components --out-dir dist --copy-files --extensions \".ts,.tsx\" --source-maps inline --ignore \"**/*.d.ts\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9797 -s public",
