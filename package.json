@@ -1,11 +1,18 @@
 {
   "name": "psj-ui-kit",
-  "version": "0.1.10",
+  "type": "module",
+  "source": "src/components/index.ts",
+  "exports": {
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.modern.js"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.module.js",
+  "unpkg": "./dist/index.umd.js",
+  "version": "0.1.13",
   "private": false,
   "description": "Use for all Jason side project",
   "author": "Jason",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
@@ -16,7 +23,6 @@
     "url": "git+https://github.com/st890670/psj-ui-kit.git"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
@@ -33,8 +39,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:bundle": "microbundle --css inline",
     "build-storybook": "build-storybook -s public",
-    "build:npm": "rm -rf dist && babel src/components --out-dir dist --copy-files --extensions \".ts,.tsx\" --source-maps inline --ignore \"**/*.d.ts\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9797 -s public",
@@ -69,10 +75,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/cli": "^7.18.10",
-    "@babel/core": "^7.18.10",
-    "@babel/preset-env": "^7.18.10",
-    "@babel/preset-typescript": "^7.18.6",
     "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-interactions": "^6.5.9",
@@ -84,6 +86,7 @@
     "@storybook/react": "^6.5.9",
     "@storybook/testing-library": "^0.0.13",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "microbundle": "^0.15.1",
     "prop-types": "^15.8.1",
     "sass": "^1.54.0",
     "webpack": "^5.74.0"
